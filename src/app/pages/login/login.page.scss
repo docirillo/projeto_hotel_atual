@@ -2,7 +2,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    width: 75%;
+    width: 45%;
     margin: 0 auto;
     z-index: 2;
 
@@ -11,7 +11,7 @@
     }
 
     &.bottom {
-        bottom: 0.1%;
+        bottom: 1%;
 
         span {
             color: #fff;
@@ -35,6 +35,13 @@ ion-slides{
             ion-input {
                 --color: #fff;
             }
+
+            ion-datetime {
+                --placeholder-color: #fff;
+                
+            }
+
+            
         }
     }
 }

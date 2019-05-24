@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
     private authService: AuthService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   segmentChanged(event: any) {
     if (event.detail.value === 'login') {

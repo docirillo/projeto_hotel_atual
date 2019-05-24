@@ -1,18 +1,10 @@
 <ion-content class="swiper-no-swiping">
+  
+    <div class="container top">
+        <img src="/assets/img/Novotel_Itu_colorido_RGB.png">  
+    </div>
 
-  <div class="container top" [hidden]="keyboard.isVisible">
-    
-
-    <ion-segment (ionChange)="segmentChanged($event)" value="login">
-        <ion-segment-button value="login">
-          <ion-label>Login</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="register">
-          <ion-label>Cadastro</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-
-  </div>
+  
 
   <ion-slides>
     <ion-slide>
@@ -42,6 +34,16 @@
         </ion-item>
 
         <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text" placeholder="Telefone com DDD"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-input type="text">
+          <ion-datetime display-format="DD MMMM YYYY" placeholder="Data de Nascimento"></ion-datetime>
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
           <ion-input type="email" placeholder="E-mail" [(ngModel)]="userRegister.email"></ion-input>
         </ion-item>
 
@@ -58,8 +60,15 @@
 
 
   
-    <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
-        
+    <div class="container bottom ion-text-center">
+        <ion-segment (ionChange)="segmentChanged($event)" value="login">
+            <ion-segment-button value="login">
+              <ion-label>Login</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="register">
+              <ion-label>Cadastro</ion-label>
+            </ion-segment-button>
+          </ion-segment>
     </div>
  
 </ion-content>
