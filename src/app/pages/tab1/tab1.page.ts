@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab1Page implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
+
+
   }
+
+
 
 }

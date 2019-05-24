@@ -6,7 +6,7 @@ import { User } from 'src/app/interfaces/user';
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private afa: AngularFireAuth) {}
+  constructor(private afa: AngularFireAuth) { }
 
   login(user: User) {
     return this.afa.auth.signInWithEmailAndPassword(user.email, user.password);
@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   logout() {
-
+    return this.afa.auth.signOut();
   }
 
   getAuth() {
