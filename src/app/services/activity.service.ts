@@ -28,19 +28,21 @@ export class ActivityService {
   }
 
   addActivity(activity: Activity) {
+    return this.activitiesCollection.add(activity);
 
   }
 
   getActivity(id: string) {
-
+    return this.activitiesCollection.doc<Activity>(id).valueChanges();
   }
 
   updateActivity(id: string, activity: Activity) {
+    return this.activitiesCollection.doc<Activity>(id).update(activity);
 
   }
 
   deleteActivity(id: string) {
-
+    return this.activitiesCollection.doc(id).delete();
   }
 
 
