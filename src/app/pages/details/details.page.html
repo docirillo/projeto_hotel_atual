@@ -15,17 +15,32 @@
     </ion-item>
     <ion-item>
       <ion-input type="text" [(ngModel)]="activity.description" placeholder="Descrição"></ion-input>
-    </ion-item>
+    </ion-item>       
+    
     <ion-item>
-      <ion-input type="text" [(ngModel)]="activity.location" placeholder="Localização"></ion-input>
-    </ion-item>    
+        <ion-label>Local</ion-label>
+        <ion-select [(ngModel)]="activity.location" ok-text="OK" cancel-text="Cancelar">
+          <ion-select-option value="Campo de Futebol">Campo de Futebol</ion-select-option>
+          <ion-select-option value="Piscina">Piscina</ion-select-option>
+          <ion-select-option value="Parque Aquático">Parque Aquático</ion-select-option>
+          <ion-select-option value="Quadra de Tênis">Quadra de Tênis</ion-select-option>
+          <ion-select-option value="Sala Kids">Sala Kids</ion-select-option>          
+          <ion-select-option value="Deck Bar">Deck Bar</ion-select-option>
+          <ion-select-option value="Gourmet Bar">Gourmet Bar</ion-select-option>
+          <ion-select-option value="Lobby Bar">Lobby Bar</ion-select-option>
+          <ion-select-option value="Restaurante Raro">Restaurante Raro</ion-select-option>          
+        </ion-select>
+      </ion-item>
   </ion-list>
 </ion-content>
+
+
+  
 
 <ion-footer>
   <ion-toolbar>
     <ion-button (click)="saveActivity()" expand="block">
-      Salvar atividade
+      Salvar Atividade
     </ion-button>
   </ion-toolbar>
 </ion-footer>
