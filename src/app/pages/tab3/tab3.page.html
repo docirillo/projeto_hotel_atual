@@ -1,26 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Atividades do dia</ion-title>
+    <ion-title>Atividades do Dia</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list *ngIf="!activities.length">
-    <ion-item *ngFor="let item of [0, 1, 2, 3]">
-      <ion-avatar slot="start">
-        <ion-skeleton-text animated></ion-skeleton-text>
-      </ion-avatar>
+    <ion-item *ngFor="let item of [0, 1, 2, 3]">      
       <ion-label>
         <h3>
-          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
         </h3>
         <p>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
-        </p>
-        <p>
           <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-        </p>
+        </p>        
       </ion-label>
+      <ion-thumbnail slot="end">
+          <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
     </ion-item>
   </ion-list>
 
@@ -60,7 +57,7 @@
 
         <ion-col size="6">
           <ion-button routerLink="/details" expand="block">
-            Adicionar Atividade
+            Nova Atividade
           </ion-button>
         </ion-col>
       </ion-row>

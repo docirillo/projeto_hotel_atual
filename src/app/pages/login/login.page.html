@@ -1,8 +1,7 @@
-<ion-content class="swiper-no-swiping">
-  
-    <div class="container top">
+<ion-content class="swiper-no-swiping">  
+  <div class="container top" [hidden]="keyboard.isVisible">
         <img src="/assets/img/Novotel_Itu_colorido_RGB.png">  
-    </div>
+  </div>
 
   
 
@@ -34,14 +33,8 @@
         </ion-item>
 
         <ion-item class="ion-margin-top" lines="none">
-          <ion-input type="text" placeholder="Telefone com DDD"></ion-input>
-        </ion-item>
-
-        <ion-item class="ion-margin-top" lines="none">
-          <ion-input type="text">
-          <ion-datetime display-format="DD MMMM YYYY" placeholder="Data de Nascimento"></ion-datetime>
-          </ion-input>
-        </ion-item>
+          <ion-input type="number" maxlength="12" placeholder="Telefone com DDD"></ion-input>
+        </ion-item>        
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="email" placeholder="E-mail" [(ngModel)]="userRegister.email"></ion-input>
@@ -49,6 +42,11 @@
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="password" placeholder="Senha" [(ngModel)]="userRegister.password"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none" color="primary">
+          <ion-checkbox checked="true"></ion-checkbox>
+          <ion-label>Receber informações</ion-label>
         </ion-item>
 
         <ion-button class="ion-margin-top" (click)="register()" color="light" expand="block">
@@ -60,12 +58,12 @@
 
 
   
-    <div class="container bottom ion-text-center">
-        <ion-segment (ionChange)="segmentChanged($event)" value="login">
-            <ion-segment-button value="login">
+    <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
+        <ion-segment (ionChange)="segmentChanged($event)" value="login" mode="md">
+            <ion-segment-button mode="md" value="login">
               <ion-label>Login</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="register">
+            <ion-segment-button mode="md" value="register">
               <ion-label>Cadastro</ion-label>
             </ion-segment-button>
           </ion-segment>
