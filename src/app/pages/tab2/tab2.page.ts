@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterContentInit, ViewChild } from '@angular/core';
-declare var google;
+
 
 @Component({
   selector: 'app-tab2',
@@ -7,8 +7,8 @@ declare var google;
   styleUrls: ['./tab2.page.scss'],
 })
 export class Tab2Page implements OnInit, AfterContentInit {
-  map;
-  @ViewChild('mapElement') mapElement;
+
+
 
   constructor() { }
 
@@ -16,12 +16,7 @@ export class Tab2Page implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(): void {
-    this.map = new google.maps.Map(
-        this.mapElement.nativeElement,
-        {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
+
   }
 
 }

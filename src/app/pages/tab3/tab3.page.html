@@ -6,17 +6,17 @@
 
 <ion-content>
   <ion-list *ngIf="!activities.length">
-    <ion-item *ngFor="let item of [0, 1, 2, 3]">      
+    <ion-item *ngFor="let item of [0, 1, 2, 3]">
       <ion-label>
         <h3>
           <ion-skeleton-text animated style="width: 40%"></ion-skeleton-text>
         </h3>
         <p>
           <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-        </p>        
+        </p>
       </ion-label>
       <ion-thumbnail slot="end">
-          <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
       </ion-thumbnail>
     </ion-item>
   </ion-list>
@@ -24,14 +24,14 @@
   <ion-list>
     <ion-item-sliding *ngFor="let activity of activities">
       <ion-item button [routerLink]="['/details', activity.id]">
-        
+
         <ion-label *ngIf="activity.location">
           {{ activity.description }}
-          <p>{{ activity.location }}</p>          
+          <p>{{ activity.location }}</p>
         </ion-label>
 
         <ion-note color="primary" slot="end">
-            {{ activity.time }}
+          {{ activity.time }}
         </ion-note>
       </ion-item>
 

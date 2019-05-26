@@ -20,15 +20,15 @@ export class Tab3Page implements OnInit {
     private loadingCtrl: LoadingController,
     private activityService: ActivityService,
     private toastCtrl: ToastController
-    ) {
-      this.activitiesSubscription = this.activityService.getActivities().subscribe(data => {
-        this.activities = data;
-      });
-    }
+  ) {
+    this.activitiesSubscription = this.activityService.getActivities().subscribe(data => {
+      this.activities = data;
+    });
+  }
 
-ngOnInit() { }
+  ngOnInit() { }
 
-ngOnDestroy() {
+  ngOnDestroy() {
     this.activitiesSubscription.unsubscribe();
   }
 
