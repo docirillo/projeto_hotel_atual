@@ -16,7 +16,9 @@ const routes: Routes = [
       { path: 'tab2', loadChildren: '../tab2/tab2.module#Tab2PageModule' },
       { path: 'tab3', loadChildren: '../tab3/tab3.module#Tab3PageModule' },
       { path: 'tab4', loadChildren: '../tab4/tab4.module#Tab4PageModule' },
-      { path: 'details', loadChildren: '../details/details.module#DetailsPageModule' }
+      { path: 'details', loadChildren: '../details/details.module#DetailsPageModule' },
+      { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardPageModule' },
+      { path: 'servicos', loadChildren: '../servicos/servicos.module#ServicosPageModule' }
     ]
   },
   {
