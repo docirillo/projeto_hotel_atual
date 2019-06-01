@@ -12,7 +12,6 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginPage implements OnInit {
   @ViewChild(IonSlides) slides: IonSlides;
   public userLogin: User = {};
-  public userRegister: User = {};
   private loading: any;
 
   constructor(
@@ -20,7 +19,7 @@ export class LoginPage implements OnInit {
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit() { }
 
@@ -44,29 +43,7 @@ export class LoginPage implements OnInit {
     }
   }
 
-  async register() {
-    await this.presentLoading();
 
-    try {
-      await this.authService.register(this.userRegister);
-    } catch (error) {
-      let message: string;
-
-      switch (error.code) {
-        case 'auth/email-already-in-use':
-          message = 'E-mail já está sendo utilizado!';
-          break;
-
-        case 'auth/invalid-email':
-          message = 'E-mail inválido!';
-          break;
-      }
-
-      this.presentToast(message);
-    } finally {
-      this.loading.dismiss();
-    }
-  }
 
   async presentLoading() {
     this.loading = await this.loadingCtrl.create({
