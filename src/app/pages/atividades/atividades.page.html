@@ -33,7 +33,7 @@
         </ion-label>
 
         <ion-note color="primary" slot="end">
-          <p>{{ activity.date }}</p>
+          <p>{{ activity.date | date: 'dd/MM/yyyy' }}</p>
           {{ activity.time }}
         </ion-note>
       </ion-item>
