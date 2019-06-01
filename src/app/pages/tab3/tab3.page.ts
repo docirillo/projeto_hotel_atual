@@ -16,7 +16,6 @@ export class Tab3Page implements OnInit {
   private activitiesSubscription: Subscription;
 
   constructor(
-    private authService: AuthService,
     private loadingCtrl: LoadingController,
     private activityService: ActivityService,
     private toastCtrl: ToastController
@@ -32,22 +31,6 @@ export class Tab3Page implements OnInit {
     this.activitiesSubscription.unsubscribe();
   }
 
-  async logout() {
-    await this.presentLoading();
-
-    try {
-      await this.authService.logout();
-    } catch (error) {
-      console.error(error);
-    } finally {
-      this.loading.dismiss();
-    }
-  }
-
-  async presentLoading() {
-    this.loading = await this.loadingCtrl.create({ message: 'Aguarde...' });
-    return this.loading.present();
-  }
 
   async deleteActivity(id: string) {
     try {
