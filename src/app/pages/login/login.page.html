@@ -1,9 +1,9 @@
-<ion-content class="swiper-no-swiping">  
+<ion-content class="swiper-no-swiping">
   <div class="container top" [hidden]="keyboard.isVisible">
-       
+
   </div>
 
-  
+
 
   <ion-slides>
     <ion-slide>
@@ -34,7 +34,7 @@
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="number" maxlength="12" placeholder="Telefone com DDD"></ion-input>
-        </ion-item>        
+        </ion-item>
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="email" placeholder="E-mail" [(ngModel)]="userRegister.email"></ion-input>
@@ -42,11 +42,6 @@
 
         <ion-item class="ion-margin-top" lines="none">
           <ion-input type="password" placeholder="Senha" [(ngModel)]="userRegister.password"></ion-input>
-        </ion-item>
-
-        <ion-item class="ion-margin-top" lines="none" color="primary">
-          <ion-checkbox checked="true"></ion-checkbox>
-          <ion-label>Receber informações</ion-label>
         </ion-item>
 
         <ion-button class="ion-margin-top" (click)="register()" color="light" expand="block">
@@ -57,16 +52,16 @@
   </ion-slides>
 
 
-  
-    <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
-        <ion-segment (ionChange)="segmentChanged($event)" value="login" mode="md">
-            <ion-segment-button mode="md" value="login">
-              <ion-label>Login</ion-label>
-            </ion-segment-button>
-            <ion-segment-button mode="md" value="register">
-              <ion-label>Cadastro</ion-label>
-            </ion-segment-button>
-          </ion-segment>
-    </div>
- 
+
+  <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible">
+    <ion-segment (ionChange)="segmentChanged($event)" value="login" mode="md">
+      <ion-segment-button mode="md" value="login">
+        <ion-label>Login</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode="md" value="register">
+        <ion-label>Cadastro</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
 </ion-content>

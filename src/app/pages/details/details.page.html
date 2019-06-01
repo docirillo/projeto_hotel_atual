@@ -10,34 +10,39 @@
 
 <ion-content class="ion-padding">
   <ion-list>
+      <ion-item>
+          <ion-label position="stacked">Data</ion-label>
+          <ion-input type="date" [(ngModel)]="activity.date"></ion-input>
+        </ion-item>
     <ion-item>
-        <ion-label position="stacked">Horário</ion-label>
+      <ion-label position="stacked">Horário</ion-label>
       <ion-input type="time" [(ngModel)]="activity.time"></ion-input>
     </ion-item>
+
     <ion-item>
       <ion-label position="floating">Nome da Atividade</ion-label>
       <ion-input type="text" [(ngModel)]="activity.description"></ion-input>
-    </ion-item>       
-    
+    </ion-item>
+
     <ion-item>
-        <ion-label position="floating">Local</ion-label>
-        <ion-select [(ngModel)]="activity.location" ok-text="OK" cancel-text="Cancelar">
-          <ion-select-option value="Campo de Futebol">Campo de Futebol</ion-select-option>
-          <ion-select-option value="Piscina">Piscina</ion-select-option>
-          <ion-select-option value="Parque Aquático">Parque Aquático</ion-select-option>
-          <ion-select-option value="Quadra de Tênis">Quadra de Tênis</ion-select-option>
-          <ion-select-option value="Sala Kids">Sala Kids</ion-select-option>          
-          <ion-select-option value="Deck Bar">Deck Bar</ion-select-option>
-          <ion-select-option value="Gourmet Bar">Gourmet Bar</ion-select-option>
-          <ion-select-option value="Lobby Bar">Lobby Bar</ion-select-option>
-          <ion-select-option value="Restaurante Raro">Restaurante Raro</ion-select-option>          
-        </ion-select>
-      </ion-item>
+      <ion-label position="floating">Local</ion-label>
+      <ion-select [(ngModel)]="activity.location" ok-text="OK" cancel-text="Cancelar">
+        <ion-select-option value="Campo de Futebol">Campo de Futebol</ion-select-option>
+        <ion-select-option value="Piscina">Piscina</ion-select-option>
+        <ion-select-option value="Parque Aquático">Parque Aquático</ion-select-option>
+        <ion-select-option value="Quadra de Tênis">Quadra de Tênis</ion-select-option>
+        <ion-select-option value="Sala Kids">Sala Kids</ion-select-option>
+        <ion-select-option value="Deck Bar">Deck Bar</ion-select-option>
+        <ion-select-option value="Gourmet Bar">Gourmet Bar</ion-select-option>
+        <ion-select-option value="Lobby Bar">Lobby Bar</ion-select-option>
+        <ion-select-option value="Restaurante Raro">Restaurante Raro</ion-select-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
 </ion-content>
 
 
-  
+
 
 <ion-footer>
   <ion-toolbar>

@@ -2,11 +2,11 @@ import { Component, OnInit, AfterContentInit, ViewChild } from '@angular/core';
 
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: './tab2.page.html',
-  styleUrls: ['./tab2.page.scss'],
+  selector: 'app-Map',
+  templateUrl: './Map.page.html',
+  styleUrls: ['./Map.page.scss'],
 })
-export class Tab2Page implements OnInit, AfterContentInit {
+export class MapPage implements OnInit, AfterContentInit {
 
 
 

@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Contato</ion-title>
+    <ion-button slot="end" [routerLink]="['/dashboard']">
+      <ion-icon name="settings"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +14,7 @@
       <ion-card-title>Recepção</ion-card-title>
     </ion-card-header>
       <ion-card-content>
-      Para falar com nossa recepção, disque 9 do telefone de seu quarto ou, se preferir, ligue 2118-1400.
+      Para falar com nossa recepção, disque 9 do telefone de seu quarto ou, se preferir, <a href="tel:1121181400">ligue 2118-1400</a>.
       </ion-card-content>
   </ion-card>
 

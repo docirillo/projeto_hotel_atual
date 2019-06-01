@@ -6,11 +6,11 @@ import { Activity } from 'src/app/interfaces/activity';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: './tab3.page.html',
-  styleUrls: ['./tab3.page.scss'],
+  selector: 'app-atividades',
+  templateUrl: './atividades.page.html',
+  styleUrls: ['./atividades.page.scss'],
 })
-export class Tab3Page implements OnInit {
+export class AtividadesPage implements OnInit {
   private loading: any;
   public activities = new Array<Activity>();
   private activitiesSubscription: Subscription;

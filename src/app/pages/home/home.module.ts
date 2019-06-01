@@ -12,10 +12,10 @@ const routes: Routes = [
     path: 'home',
     component: HomePage,
     children: [
-      { path: 'tab1', loadChildren: '../tab1/tab1.module#Tab1PageModule' },
-      { path: 'tab2', loadChildren: '../tab2/tab2.module#Tab2PageModule' },
-      { path: 'tab3', loadChildren: '../tab3/tab3.module#Tab3PageModule' },
-      { path: 'tab4', loadChildren: '../tab4/tab4.module#Tab4PageModule' },
+      { path: 'noticias', loadChildren: '../noticias/noticias.module#NoticiasPageModule' },
+      { path: 'Map', loadChildren: '../map/map.module#MapPageModule' },
+      { path: 'atividades', loadChildren: '../atividades/atividades.module#AtividadesPageModule' },
+      { path: 'contato', loadChildren: '../contato/contato.module#ContatoPageModule' },
       { path: 'details', loadChildren: '../details/details.module#DetailsPageModule' },
       { path: 'dashboard', loadChildren: '../dashboard/dashboard.module#DashboardPageModule' },
       { path: 'servicos', loadChildren: '../servicos/servicos.module#ServicosPageModule' }
@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home/tab1',
+    redirectTo: 'home/noticias',
     pathMatch: 'full'
   }
 ];
