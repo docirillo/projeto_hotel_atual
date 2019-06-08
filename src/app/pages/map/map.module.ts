@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { MapPage } from './Map.page';
+import { MapPage } from './map.page';
 
 const routes: Routes = [
   {
