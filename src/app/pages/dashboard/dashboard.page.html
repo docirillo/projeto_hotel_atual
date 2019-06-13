@@ -5,6 +5,9 @@
     </ion-buttons>
 
     <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="primary">
+        <ion-button (click)="logout()" expand="block">Logout</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,11 +31,7 @@
   </ion-toolbar>
 
   <ion-footer>
-    <ion-toolbar>
-      <ion-button (click)="logout()" color="danger" expand="block">
-        Sair
-      </ion-button>
-    </ion-toolbar>
+    
   </ion-footer>
 
 </ion-content>

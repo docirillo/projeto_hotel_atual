@@ -10,7 +10,7 @@ export class ActivityService {
   private activitiesCollection: AngularFirestoreCollection<Activity>;
 
   constructor(private afs: AngularFirestore) {
-    this.activitiesCollection = this.afs.collection<Activity>('Activities');
+    this.activitiesCollection = this.afs.collection<Activity>('Activities', ref => ref.orderBy('time', 'asc'));
 
   }
 

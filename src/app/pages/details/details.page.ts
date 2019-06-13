@@ -65,7 +65,7 @@ export class DetailsPage implements OnInit {
         );
         await this.loading.dismiss();
 
-        this.navCtrl.navigateBack('/home');
+        this.navCtrl.navigateBack('/dashboard');
       } catch (error) {
         this.presentToast('Erro ao tentar salvar');
         this.loading.dismiss();
@@ -76,7 +76,7 @@ export class DetailsPage implements OnInit {
         await this.activityService.addActivity(this.activity);
         await this.loading.dismiss();
 
-        this.navCtrl.navigateBack('/home');
+        this.navCtrl.navigateBack('/dashboard');
       } catch (error) {
         this.presentToast('Erro ao tentar salvar');
         this.loading.dismiss();
