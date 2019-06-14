@@ -3,8 +3,8 @@
     <ion-title>Atividades do Dia</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>  
-  
+<ion-content>
+
   <ion-list *ngIf="!activities.length">
     <ion-item *ngFor="let item of [0, 1, 2, 3, 4, 5, 6]">
       <ion-label>
@@ -23,16 +23,32 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let activity of activities">
-      <ion-item>
+      <ion-item mode="ios">
 
-        <ion-label *ngIf="activity.location">
-          {{ activity.description }}
-          <p>{{ activity.location }}</p>
+        <ion-label text-wrap *ngIf="activity.location">
+          <ion-text color="primary">
+            <h2>{{ activity.description }}</h2>
+          </ion-text>
+
+          <p>
+            <ion-text color="tertiary">
+              <h3>{{ activity.location }}</h3>
+            </ion-text>
+          </p>
+
         </ion-label>
 
         <ion-note color="primary" slot="end">
-          <p>{{ activity.date | date: 'dd/MM/yyyy' }}</p>
-          {{ activity.time }}
+          <p>
+            <ion-chip color="primary">
+              <ion-icon name="calendar"></ion-icon>
+              <ion-label>{{ activity.date | date: 'dd/MM/yyyy' }}</ion-label>
+            </ion-chip>
+          </p>
+          <ion-chip color="danger">
+            <ion-icon name="alarm"></ion-icon>
+            <ion-label>{{ activity.time }}</ion-label>
+          </ion-chip>
         </ion-note>
       </ion-item>
 
