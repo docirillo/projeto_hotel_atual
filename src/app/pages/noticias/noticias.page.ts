@@ -9,9 +9,9 @@ export class NoticiasPage implements OnInit {
 
   cards = [
     {
-      title: 'Novotel Itu Golf & Resort',
-      image: '/../assets/img/piscina.jpg',
-      description: 'Aqui você pode conhecer um pouco mais sobre o Hotel, atividades e serviços oferecidos.',
+      title: 'Le Club Accor Hotels',
+      image: '/../assets/img/azul.jpg',
+      description: '',
     },
     {
       title: 'Jantar Dia dos Namorados',
