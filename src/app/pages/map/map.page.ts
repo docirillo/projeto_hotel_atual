@@ -29,11 +29,11 @@ export class MapPage implements OnInit, AfterViewInit {
         lng: this.longitude
       };
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
+      infoWindow.setContent('Você está aqui.');
       infoWindow.open(map);
       map.setCenter(pos);
     }).catch((error) => {
-      console.log('Error getting location', error);
+      console.log('Erro ao obter localização', error);
     });
   }
 
